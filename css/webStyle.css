@@ -1,0 +1,178 @@
+html { 
+  background: url(../images/original.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.page{
+  width: 100%;
+  height: 100%;
+}
+
+.leftColumn{
+  position: relative;
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+
+.centerColumn{
+  position: relative;
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.rightColumn{
+  position: relative;
+  width: 25%;
+  height: 100%;
+  float: right;
+}
+
+/*Clock*/
+/*#####################################################*/
+.clockContainer{
+  width: 100%; /* Fix this */
+  color: #fff;
+
+  position: absolute;
+  top:20%;
+  display: inline-block;
+  text-align: center;
+}
+
+.clockContainer #clockTitle, #clock{
+  font-family: 'Press Start 2P', cursive;
+
+  text-shadow:
+    -2px -2px #000,
+    2px -2px #000,
+    -2px 2px #000,
+    2px 2px #000;
+}
+
+#clockTitle{
+  display: inline-block;
+  font-size: 4.5vw;
+}
+
+#clock{
+  font-weight: bold;
+  font-size: 3.5vw;
+  display: inline-block;
+  padding: 5px 0px;
+}
+
+
+/*Alarm*/
+/*#####################################################*/
+.alarmContainer{
+  margin-top: 30px;
+  text-align: center;
+}
+
+#alarmInput{
+  width: 50px;
+}
+
+#alarmButton{
+  width: 120px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 8px;
+}
+
+#alarmNotification{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.4vw;
+
+  text-shadow:
+  -2px -2px #000,
+  2px -2px #000,
+  -2px 2px #000,
+  2px 2px #000;
+}
+
+/*Music*/
+/*#####################################################*/
+.musicContainer{
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  padding-bottom: 56.25%;
+  z-index: 1;
+}
+
+#musicIframe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/*Military Button*/
+/*#####################################################*/
+#militaryButton{
+  padding: 10px;
+  width: 60%;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#milButtonText{
+  font-family: 'Press Start 2P', cursive;
+  overflow: hidden;
+/*  white-space: nowrap;*/
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/*Footer*/
+/*#####################################################*/
+footer{
+  z-index: 2;
+}
+
+footer p {
+  color: white;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+}
+
+/*Media Queries*/
+/*#####################################################*/
+@media screen and (min-width: 1200px) {
+  .clockContainer #clockTitle{
+    font-size: 54px;
+  }
+
+  .clockContainer #clock {
+     font-size: 42px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .alarmContainer #alarmNotification{
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  footer p{
+    font-size: 12px;
+  }
+}

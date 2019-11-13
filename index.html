@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<!--   <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="Clock Practice Website" content="clock, alarm, and music player">
+  <meta name="Author" content="Nicholas Marconi">
+
+  <title>Alarm Clock</title>
+  <!-- import fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Covered+By+Your+Grace" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!--import css file-->
+  <link rel="stylesheet" type="text/css" href="css/webStyle.css">
+
+</head>
+<body>
+  <section class="page">
+    <div class="leftColumn">
+      <div class="musicContainer">
+        <iframe id="musicIframe" width="560" height="315" src="https://www.youtube.com/embed/bebuiaSKtU4?enablejsapi=1" frameborder="5" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+    </div>
+
+    <div class="centerColumn">
+      <div class="clockContainer">
+        <h1 id="clockTitle">CLOCK</h1>
+        <br>
+        <span id="clock">Clock goes here</span>
+        <br>
+<!--         <h3 id="alarmTitle">ALARM</h3> -->
+        <div class= "alarmContainer">
+          <input id="alarmInput" type="text" placeholder="00:00">
+          <select id="meridiemSelector">
+            <option value="0" selected>None</option>
+            <option value="1">AM</option>
+            <option value="2">PM</option>
+          </select>
+          <br>
+          <button id="alarmButton">Set Alarm</button>
+          <br>
+          <h4 hidden id="alarmNotification"></h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="rightColumn">
+<!--       <div class="milButtonWrapper"> -->
+        <button id="militaryButton">
+          <div id="milButtonText">Military Time</div>
+        </button>
+<!--       </div> -->
+    </div>
+  </section>
+
+  <footer>
+    <p>Nicholas Marconi 2019</p>
+  </footer>
+
+  <script src="javascript/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="javascript/clock.js"></script>
+</body>
+</html>
